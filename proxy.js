@@ -9,11 +9,19 @@ const proxy = createProxyMiddleware({
   pathRewrite: (path) => path.replace(/^\/supabase/, ''),
   on: {
     proxyReq: (proxyReq, req) => {
+      // Всегда добавляем анонимный ключ
       proxyReq.setHeader('apikey', ANON_KEY);
+      
+      // Если клиент прислал свой токен – используем его, иначе подставляем дефолтный
       if (req.headers.authorization) {
         proxyReq.setHeader('Authorization', req.headers.authorization);
       } else {
         proxyReq.setHeader('Authorization', `Bearer ${ANON_KEY}`);
+      }
+      
+      // Устанавливаем Content-Type, если его нет
+      if (!proxyReq.getHeader('Content-Type')) {
+        proxyReq.setHeader('Content-Type', 'application/json');
       }
     }
   }
