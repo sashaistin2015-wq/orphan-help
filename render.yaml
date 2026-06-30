@@ -8,4 +8,4 @@ services:
       - key: SUPABASE_URL
         value: https://plejzaehtlcesxszugcx.supabase.co
       - key: SUPABASE_KEY
-        value: ваш_anon_key
+        value: sb_publishable_ocETCKxjTIX407MnavMerA_LkMWowhs
