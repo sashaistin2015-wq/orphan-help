@@ -8,4 +8,4 @@ services:
       - key: SUPABASE_URL
         value: https://plejzaehtlcesxszugcx.supabase.co
       - key: SUPABASE_KEY
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsZWp6YWVodGxjZXN4c3p1Z2N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI3MDkxNzcsImV4cCI6MjA5ODI4NTE3N30.xWlI0egd7wLjyCcv30_Gr95hVv4jShdrIAxo_IaKrNM
+        value: sb_publishable_ocETCKxjTIX407MnavMerA_LkMWowhs
