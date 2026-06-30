@@ -1,0 +1,4 @@
+{
+  "name": "supabase-proxy",
+  "dependencies": { "http-proxy": "^1.18.1" }
+}
