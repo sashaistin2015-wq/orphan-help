@@ -1,8 +1,0 @@
-{
-  "name": "supabase-proxy",
-  "version": "1.0.0",
-  "scripts": {},
-  "dependencies": {
-    "http-proxy-middleware": "^3.0.0"
-  }
-}
