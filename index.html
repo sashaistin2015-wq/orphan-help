@@ -72,13 +72,11 @@
     <script>
         (function() {
             // ═══════════════ КОНФИГУРАЦИЯ ═══════════════
-            const SUPABASE_URL = 'https://supabase-proxy.onrender.com';
-            const SUPABASE_KEY = 'sb_publishable_ocETCKxjTIX407MnavMerA_LkMWowhs';
-            const apiHeaders = {
-                'apikey': SUPABASE_KEY,
-                'Authorization': `Bearer ${SUPABASE_KEY}`,
-                'Content-Type': 'application/json'
-            };
+          const SUPABASE_URL = 'https://supabase-proxy.onrender.com';
+const SUPABASE_KEY = 'sb_publishable_ocETCKxjTIX407MnavMerA_LkMWowhs'; // тот же ключ
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+    auth: { persistSession: false, autoRefreshToken: false }
+});
 
             // ═══════════════ API ФУНКЦИИ ═══════════════
             async function apiGet(table, params = {}) {
