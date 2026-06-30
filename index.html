@@ -97,7 +97,7 @@
     <script>
         (function() {
             window.App = window.App || {};
-          const SUPABASE_URL = 'https://plejzaehtlcesxszugcx.supabase.co';
+         const SUPABASE_URL = window.location.origin + '/supabase';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsZWp6YWVodGxjZXN4c3p1Z2N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI3MDkxNzcsImV4cCI6MjA5ODI4NTE3N30.xWlI0egd7wLjyCcv30_Gr95hVv4jShdrIAxo_IaKrNM';
 const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
     auth: { persistSession: true, autoRefreshToken: true }
